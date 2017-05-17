@@ -16,6 +16,11 @@ end
 def edit
 end
 
+def update
+    @restaurant.update(restaurant_params)
+    redirect_to restaurant_path(@restaurant)
+  end
+
 def create
  @restaurant = Restaurant.new(restaurant_params)
  @restaurant.save
@@ -37,7 +42,7 @@ end
 private
 
 def restaurant_params
-  params.require(:restaurant).permit(:name, :address, :description, :stars)
+  params.require(:restaurant).permit(:name, :address, :description, :stars, :chef)
 end
 
 def set_restaurant

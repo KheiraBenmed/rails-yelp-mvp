@@ -2,17 +2,18 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-10 col-xs-offset-1">
-      <%= form_for(@restaurant) do |f| %>
+      <%= simple_form_for @restaurant do |f| %>
       <%= f.label :name %>
       <%= f.text_field :name %>
       <%= f.label :description %>
       <%= f.text_area :description %>
-      <%= f.label :stars %>
-      <%= f.text_field :stars %>
       <%= f.label :chef %>
       <%= f.text_field :chef %>
-      <%= f.submit %>
+      <%= f.label :stars %>
+      <%= f.text_field :stars %>
+      <%= f.button :submit %>
       <% end %>
     </div>
   </div>
+   <%= link_to "retour", restaurants_path %>
 </div>
