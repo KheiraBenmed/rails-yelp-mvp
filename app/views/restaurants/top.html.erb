@@ -1,0 +1,6 @@
+<h1>Voici la liste des meilleurs restaurants</h1>
+<ul>
+  <% @restaurants.each do |restaurant| %>
+  <li><%= restaurant.name %></li>
+  <li><%= restaurant.stars %></li>
+</ul>
